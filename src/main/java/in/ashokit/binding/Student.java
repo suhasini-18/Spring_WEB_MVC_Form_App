@@ -2,8 +2,7 @@ package in.ashokit.binding;
 
 import java.util.Arrays;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import javax.persistence.Id;
 
 
 public class Student {

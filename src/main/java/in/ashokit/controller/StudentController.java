@@ -53,9 +53,6 @@ public class StudentController {
 	}
 	
 	//method to save student Data
-	
-	//method to display saved data
-	
 		
 		@PostMapping("/save")
 		public String handleSubmit(Student s, Model model) {
@@ -76,5 +73,17 @@ public class StudentController {
 			
 			return "index";
 			
+		}
+		
+		//method to display saved data
+		
+		@GetMapping("/viewStudents")
+		public String getStudentsData(Model model) {
+			
+			//logic to fetch and send students data 
+			
+			List <StudentEntity> studentsList = repo.findAll();
+			model.addAttribute("students", studentsList);
+			return "data";
 		}
 }
